@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Product Landing Page</title>
+	<style>
+		body
+		{
+			font-family: helvetica;
+			background-color: #EEEEEE;
+			margin: 0px;
+		}
+		.header-navbar
+		{			
+			display: flex;
+			position: fixed;
+			width: 100%;
+			background-color: #F3F3F3;
+			z-index: 1;
+		}
+		.header-navbar img
+		{			
+			margin: 0px;
+			padding: 8px 45px 0px 40px;
+			padding-top: 8px;
+			padding-right: 45px;
+			height: 40px;
+		}
+		.header-navbar ul
+		{
+			list-style-type: none;
+		    margin: 0px;
+		    margin-top: 3px;
+		    padding: 0px;
+			height: 50px;
+			width: 100%;
+		}
+		li a 
+		{
+		    display: block;
+		    color: #666;
+		    text-align: center;
+		    padding: 14px 16px;
+		    text-decoration: none;
+		}
+		.header-navbar li 
+		{
+		    float: left;
+		    border-right: 1.5px solid gray;
+		}
+		header h2
+		{
+			color: #514E27;
+			font-size: 40px;
+			font-family: century gothic;
+			margin-bottom: 0px;
+		}
+		header p
+		{
+			margin-top: 10px;
+			color:  #514E27;
+			line-height: 1.4;
+			font-size: 18px;
+		}
+
+		#product-image img
+		{
+			margin-top: 70px;
+			transform: scale(0.7);
+
+		}
+		.header-product-description
+		{
+			margin: 80px 0px 0px 120px; 
+			width: 30%;
+		}
+		.product-header
+		{
+			height: 85%;
+			width: 100%;
+			padding-bottom: 150px;
+			background-color: #F2E465;
+			border-bottom-left-radius: 55%;
+			display: flex;
+			margin: 0px;
+		}
+		.subscribe-via-email
+		{
+			margin-top: 80px;
+			text-align: center;
+		}
+		.subscribe-via-email input
+		{
+			padding: 8px;
+			width: 300px;
+		}
+		.email-button
+		{
+			margin-top: 20px;
+			padding: 8px 20px 5px 20px;
+			font-size: 17px;
+		}
+		.icon-info
+		{
+			display: flex;
+			width: 60%;
+			margin: 0px auto;
+			margin-top: 50px;
+		}
+		.desc
+		{
+			display: block;
+		}
+		.desc p
+		{
+			margin-top: -10px; 
+		}
+		.shipping
+		{
+			margin-left: -5px;
+		}
+		.quality
+		{
+			margin-left: -13px;
+		}
+		i
+		{
+			margin-right: 50px;
+			margin-top: 25px;
+			color: #F5C800;
+		}
+		#cards-container
+    	{
+    		display: flex;
+    		justify-content: space-around;
+    		margin: 50px 140px;
+    		padding: 5px;
+	  	}
+	  	.card
+	  	{
+	  		display: block;
+	  		border: 1px solid black;
+    		width: 300px; 
+    		height: 330px;
+    		text-align: center;
+    		padding: 0px;
+    		border-radius: 3px;
+    	}
+	  	.card-head
+	  	{
+	  		font-family: arial;
+	  		text-transform: uppercase;
+	  		font-size: 20px;
+	  		margin: 0px;
+	  		padding: 15px 0px;
+	  		background-color: #DDDDDD;
+	  	}
+	  	.card-desc ul
+	  	{
+	  		list-style-type: none;
+	  		display: flex;
+		    flex-direction: column;
+		    justify-content: center;
+		    align-items: center;
+		    text-align: left;
+		}
+	  	.card-desc li
+	  	{
+	  		font-size: 19px;
+	  		margin-right: 30px;
+	  		margin-top: 8px;
+	  	}
+	  	.select-btn
+	  	{
+	  		margin-top: 0px;
+			padding: 8px 14px 5px 14px;
+			font-size: 16px;
+		}
+		.select-btn-pos
+		{
+			margin-top: 35px;
+			text-align: center;
+		}
+		#how-it-works
+		{
+			display: flex;
+			justify-content: center;
+		}
+
+			iframe
+			{
+				width: 100%;
+				height: 410px;
+				max-width: 660px;
+    		}
+    	
+		.working-video
+		{
+			background: linear-gradient(180deg, #C78500, #FFAA00, #C78500, #FFAA00, #C78500);
+			background: linear-gradient(90deg, #C78500, #FFAA00, #C78500, #FFAA00, #C78500);
+			height: 70%;
+			width: 100%;
+			margin: 60px 0px 60px 0px;
+			padding: 90px 0px 90px 0px;
+			border-top-left-radius: 35%;
+			border-bottom-right-radius: 35%;
+		}
+		.footer-pos
+		{
+			display: flex;
+			justify-content: center;
+		}
+		.footer-prop
+		{
+			background-color: #DDDDDD;
+			padding: 15px; 
+			width: 75%;
+			height: 60px;
+		}
+		footer ul
+		{
+			list-style-type: none;
+			display: flex;
+			justify-content: flex-end;
+		}
+		footer li
+		{
+			padding: 0px 8px;
+		}
+		footer span
+		{
+			display: flex;
+			justify-content: flex-end;
+			font-size: 14px;
+			margin-top: -8px;
+
+		}
+	</style>
+</head>
+<body>
+	<div class="header-navbar">
+		<img src="original_trombones.png">		
+		<ul>
+			<li><a href="#features">Features</a></li>
+		  	<li><a href="#how-it-works">How It Works</a></li>
+		  	<li><a href="#pricing">Pricing</a></li>
+		</ul>
+	</div>
+	<header class="product-header">
+		<div class="header-product-description">
+			<h2 id="product-title">Original Trombones</h2>
+			<p id="product-description">Our trombones are made with the greatest care and highest quality materials. They feature best quality in materials, craftsmanship and the hardwork put into making them.</p>
+		</div>
+		<div id="product-image">
+			<img src="trumpet2.png">
+		</div>
+	</header>
+	<div class="subscribe-via-email">
+		<h2 class="catch-phrase" id="features">Handcrafted, home-made masterpieces</h2>
+		<input type="email" name="email" id="email" placeholder="Enter your Email"><br>
+		<button type="submit" class="email-button">Start Now!</button>
+	</div>
+
+	<div class="icon-info">		
+		<div class="icon">
+			<i class="fa fa-3x fa-fire"></i>
+		</div>
+		<div class="desc">
+			<h2>Premium Materials</h2>
+			<p>Our trombones use the shiniest brass which is sourced locally. This will increase the longevity of your purchase.</p>		
+		</div>
+	</div>
+	
+	<div class="icon-info">		
+		<div class="icon">
+			<i class="fa fa-3x fa-truck"></i>
+		</div>
+		<div class="desc shipping">
+			<h2>Fast Shipping</h2>
+			<p>We make sure you recieve your trombone as soon as we have finished making it. We also provide free returns if you are not satisfied.</p>		
+		</div>
+	</div>
+	
+	<div class="icon-info">		
+		<div class="icon">
+			<i class="fa fa-3x fa-battery"></i>
+		</div>
+		<div class="desc quality">
+			<h2>Quality Assurance</h2>
+			<p>For every purchase you make, we will ensure there are no damages or faults and we will check and test the pitch of your instrument.</p>		
+		</div>
+	</div>
+	
+	<div class="working-video">
+		<section id="how-it-works">
+		    <iframe id="video" height="315" src="https://www.youtube-nocookie.com/embed/y8Yv4pnO7qc?rel=0&amp;controls=1&amp;showinfo=1" frameborder="0" allowfullscreen></iframe>
+		</section>
+	</div>
+
+	<div id="cards-container">
+		<div class="card" id="pricing">
+			<h3 class="card-head">Pricing 1</h3>
+			<h3>600$</h3>
+			<div class="card-desc">
+				<ul>
+					<li>lorem ipsum best</li>
+					<li>lorem ipsum dolor</li>
+					<li>lorem ipsum</li>
+					<li>lorem ichiban best</li>
+				</ul>
+			</div>
+			<div class="select-btn-pos">
+				<button class="select-btn">SELECT</button>
+			</div>
+		</div>
+
+		<div class="card">
+			<h3 class="card-head">Pricing 1</h3>
+			<h3>600$</h3>
+			<div class="card-desc">
+				<ul>
+					<li>lorem ipsum best</li>
+					<li>lorem ipsum dolor</li>
+					<li>lorem ipsum</li>
+					<li>lorem ichiban best</li>
+				</ul>
+			</div>
+			<div class="select-btn-pos">
+				<button class="select-btn">SELECT</button>
+			</div>
+		</div>
+
+		<div class="card">
+			<h3 class="card-head">Pricing 1</h3>
+			<h3>600$</h3>
+			<div class="card-desc">
+				<ul>
+					<li>lorem ipsum best</li>
+					<li>lorem ipsum dolor</li>
+					<li>lorem ipsum</li>
+					<li>lorem ichiban best</li>
+				</ul>
+			</div>
+			<div class="select-btn-pos">
+				<button class="select-btn">SELECT</button>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="footer-pos">
+		<footer class="footer-prop">
+			<ul>
+				<li>Privacy</li>
+				<li>Terms</li>
+				<li>Contact</li>
+			</ul>
+
+			<span>Copyright 2018, Original Trombones</span>
+		</footer>
+
+	</div>
+	
+
+  
+	
+</body>
+</html>
